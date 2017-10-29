@@ -1,244 +1,556 @@
     /* Stlyesheet for Colmar Academy */
+    /* General Content */
 
-header {
-    display: flex;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.logo {
-    display: flex;
-}
-
-#banner {
-    background-image: url('./banner.jpg');
-    background-size: cover;
-    margin-top: 25px;
-    height: 500px;
-    width: 100%;
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-
-.button {}
-
-
-/*article section*/
-
-.article {
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.text {}
-
-.section2 .articlecontents .topics {
-    display: flex;
-    flex-direction: column;
-}
-
-.section2 .articlecontents .keeppracticing {
-    flex-basis: 60%;
-    flex-grow: 6;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
-.section2 .articlecontents .keeppracticing h1 {
-    margin-top: 32px;
-    margin-bottom: 24px;
-}
-
-.section2 .articlecontents .topics {
-    padding: 16px;
-    margin-bottom: 48px;
-    flex-basis: 40%;
-    flex-grow: 4;
-    border-left: solid 1px;
-}
-
-.section2 .articlecontents .topic {
-    padding: 16px;
-    margin-bottom: 1px;
-    flex-basis: 40%;
-    display: flex;
-    align-items: center;
-}
-
-.section2 .articlecontents .detail {
-    margin: 16px;
-    width: 65%;
-}
-
-.section2 .articlecontents img {
-    height: auto;
-    width: 40%;
-}
-
-.keeppracticing {
-    flex-basis: 60%;
-    flex-grow: 6;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
-.keeppracticing img {
-    width: 60%;
-    height;
-    auto;
-}
-
-.section2 .articlecontents .keeppracticing h1 {
-    margin-top: 32px;
-    margin-bottom: 24px;
-}
-
-.section2 .articlecontents .detail {
-    margin: 16px;
-}
-
-.section2 .articlecontents .topics {
-    flex-basis: 40%;
-    flex-grow: 4;
-    border-left: solid 1px #694f44;
-}
-
-.gladwell {
-    font-size: 0.9em;
-    margin-top: 1em;
-}
-
-.topics {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    flex-wrap: wrap;
-}
-
-.exhibits {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    flex-wrap: wrap;
-}
-
-.titleexhibit {
-    margin: 16px;
-    margin-bottom: 48px;
-}
-
-.infoexhibit {
-    margin: 16px;
-    margin-bottom: 48px;
-}
-
-.section4 {}
-
-
-/*classes*/
-
-.classwrap {
-    padding: 0 16px;
-    margin-bottom: 32px;
-}
-
-.classcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-flow: row;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.class {
-    padding: 4px;
-    flex-flow: column;
-    justify-content: center;
-}
-
-.classwrap .class img {
-    width: 75%;
-    height: auto;
-}
-
-.classwrap h1 {
-    text-align: center;
-}
-
-.item span {
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    padding: 5px;
-}
-
-.classinfo {
-    display: block;
-    margin: 16px;
-    width: 65%;
-    margin-left: 16px;
-}
-
-.classwrap .classcontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 32px;
-}
-
-.classwrap .class img {
-    height: auto;
-    width: 100%;
-}
-
-.classwrap .class .classinfo {
-    margin-top: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 24px;
-}
-
-.classwrap .class {
-    min-width: 265px;
-    flex-basis: 25%;
-    flex-grow: 1;
-    margin-left: 16px;
-    margin-right: 16px;
-    background-color: white;
-    margin-bottom: 32px;
-}
-
-.classwrap h1 {
-    text-align: center;
-}
-
-
-/*footer*/
-
-footer {
-    padding: 16px 24px;
-    display: flex;
-}
-
-footer .footer {
-    width: 100%;
-}
-
-@media only screen and (min-width:481px) {
-    footer {
-        border-top: solid 1px #694f44;
+    html {
+        font-size: 16px;
+        font-family: Helvetica;
+        color: black;
     }
-    footer .footerlinks {
-        width: 8em;
-        float: right;
-    }
-    footer ul {
-        list-style: none;
+    /* Header */
+
+    header {
+        z-index: 100;
+        position: fixed;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        background-color: white;
+        padding: 1.5rem;
+        min-height: 4rem;
+        right: 0;
+        left: 0;
     }
-    footer ul li {
-        margin-left: 16px;
+
+    header .company {
+        display: inline-flex;
+    }
+
+    .company .name {
+        align-self: center;
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        align-self: center;
+        padding-right: .25rem;
+        min-height: 2rem;
+        padding-left: 1.5rem;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    .name h2 {
+        display: inline-flex;
+        font-weight: bold;
+    }
+
+    .name h3 {
+        display: inline-flex;
+        color: #8F9FAC;
+    }
+
+    .menu {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu ul {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 1rem;
+    }
+
+    .menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        transition: color 0.2s linear;
+    }
+
+    .menu ul li a:hover {
+        font-weight: bold;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+    /* Content */
+
+    .content {
+        z-index: 1;
+        padding-top: 7rem;
+    }
+    /* Content - Banner */
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        background-color: #8F9FAC;
+        max-width: 100%;
+        padding-bottom: 1.5rem;
+        align-items: center;
+    }
+
+    .container-left {
+        margin-left: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .container-left img {
+        width: 100%;
+    }
+
+    .container-right {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1.5rem;
+        justify-content: center;
+        max-width: 40%;
+    }
+
+    .banner-text {
+        margin: 0 2rem;
+        padding: 1rem;
+    }
+
+    .banner-text h1 {
+        font-family: Arial;
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: bold;
+    }
+
+    .banner-text h2 {
+        font-family: Arial;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .start-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #254441;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: .5rem;
+        width: 60%;
+    }
+
+    .start-button a {
+        text-decoration: none;
+        color: white;
+        line-height: 2rem;
+        transition: all 0.2s linear;
+    }
+
+    .start-button:hover {
+        background-color: #FF6F59;
+        color: white;
+        filter: opacity(70%);
+    }
+    /* Content - Info */
+
+    .info {
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding: 0 2rem;
+    }
+
+    .left-container {
+        margin: 2rem auto;
+        max-width: 60%;
+    }
+
+    .left-container img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .left-container h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-top: 2rem;
+    }
+
+    .left-container p {
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+
+    .left-container p:last-child {
+        font-style: italic;
+    }
+
+    .article-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: #8F9FAC;
+        margin: 0 0 2rem 2rem;
+        transition: all 0.4s linear;
+        height: 10rem;
+    }
+
+    .article-box img {
+        height: 100%;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .article-box .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1.5rem;
+    }
+
+    .article-box h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+
+    .article-box p {
+        font-size: 1rem;
+    }
+
+    .article-box a {
+        text-decoration: none;
+        color: white;
+        padding-top: 1rem;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        justify-content: center;
+        max-width: 40%;
+    }
+    /* Content - Start Learning */
+
+    .classes {
+        display: flex;
+        background-color: #8F9FAC;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .title h2 {
+        font-family: Arial;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .courses {
+        display: block;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    .classes .title h2 {
+        color: white;
+    }
+
+    .course-box {
+        display: block;
+        background-color: white;
+        flex-direction: column;
+        max-width: 30%;
+        margin: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .course-box a {
+        display: block;
+        background-color: none;
+        height: 100%;
+        border-radius: 0.5rem;
+        color: black;
+        transition: all 0.2s linear;
+        text-decoration: none;
+    }
+
+    .course-box a:hover {
+        background-color: #FF6F59;
+        color: white;
+        filter: opacity(70%);
+    }
+
+    .course-box img {
+        border-radius: 0.5rem 0.5rem 0 0;
+        max-width: 100%;
+    }
+
+    .text {
+        padding: 1rem;
+        text-align: center;
+        min-height: 8rem;
+    }
+
+    .text h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    }
+
+    .text h3 {
+        padding-bottom: 1rem;
+    }
+
+    .text p {
+        text-decoration: none;
+    }
+    /* Content - Thesis Exhibit */
+
+    .info,
+    .thesis {
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding: 0 2rem;
+    }
+
+    .left-container {
+        margin: 2rem auto;
+        max-width: 60%;
+    }
+
+    .left-container video {
+        max-width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .left-container h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-top: 2rem;
+    }
+
+    .left-container p {
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        justify-content: center;
+        max-width: 40%;
+    }
+
+    .right-container h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+
+    .right-container p {
+        font-size: 1rem;
+    }
+    /* Footer */
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: #8F9FAC;
+        padding: 1.5rem;
+        min-height: 4rem;
+        right: 0;
+        color: white;
+    }
+
+    footer .company {
+        align-self: center;
+    }
+
+    footer .menu {
+        min-width: 10rem;
+    }
+
+    footer .menu ul li a {
+        color: white;
+    }
+    /* MEDIA - */
+
+    @media only screen and (max-width: 640px) {
+        .container {
+            display: block;
+            max-width: 100%;
+        }
+        .right-container {
+            display: block;
+            max-width: 100%;
+        }
+        .course-box {
+            max-width: 90%;
+        }
+        .article-box {
+            max-width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) and (min-width: 640px) {
+        .container {
+            max-width: 100%;
+        }
+        .right-container {
+            max-width: 100%;
+        }
+        .course-box {
+            max-width: 45%;
+        }
+        .article-box {
+            max-width: 45%;
+        }
+    }
+
+    @media only screen and (max-width: 840px) {
+        header {
+            position: static;
+            justify-content: center;
+            padding: 1.5rem 0 1.5rem 0;
+            min-height: 2rem;
+        }
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .mobile-nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-right: 4rem;
+        }
+        header .company,
+        .menu {
+            display: none;
+        }
+        .content {
+            padding-top: 0rem;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .left-container {
+            margin: 0 auto;
+            min-width: 100%;
+            text-align: center;
+        }
+        .thesis .left-container .text-box,
+        .thesis .right-container,
+        .info .left-container {
+            display: none;
+        }
+        .left-container img,
+        .left-container video {
+            border-radius: 0;
+        }
+        .banner {
+            display: block;
+            justify-content: center;
+            max-width: 100%;
+            padding: 0;
+        }
+        .right-container {
+            display: block;
+            text-align: center;
+            margin: 2rem auto;
+            padding-bottom: 1rem;
+            min-width: 100%;
+            justify-content: center;
+        }
+        .banner-text {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+        .article-box {
+            display: block;
+            background-color: white;
+            flex-direction: column;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            height: auto;
+            justify-content: flex-start;
+        }
+        .article-box .text-box {
+            display: block;
+            background-color: none;
+            height: 100%;
+            border-radius: 0.5rem;
+            color: black;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            transition: all 0.2s linear;
+            text-decoration: none;
+            width: 100%;
+        }
+        .article-box .text-box a {
+            color: black;
+            line-height: 3rem;
+            font-weight: bold;
+        }
+        .text {
+            padding: 1rem 3rem 1rem 1rem;
+            text-align: left;
+            min-height: 0rem;
+        }
+        .text h2 {
+            padding-bottom: 0rem;
+        }
+        .course-box img {
+            display: none;
+            height: 0%;
+        }
+        .course-box .text h3,
+        .course-box .text p {
+            display: none;
+        }
+        .start-button {
+            display: block;
+            flex-direction: column;
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 80%;
+        }
+        .article-box {
+            display: block;
+            justify-content: center;
+            margin: 2rem 0;
+            width: 100%;
+        }
+        footer {
+            background-color: white;
+            color: black;
+            justify-content: center;
+        }
     }
