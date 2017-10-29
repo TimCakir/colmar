@@ -1,12 +1,11 @@
     /* Stlyesheet for Colmar Academy */
-    /* General Content */
 
     html {
         font-size: 16px;
         font-family: Helvetica;
-        color: black;
+        color: #DB504A;
     }
-    /* Header */
+    /* Header and Nav Section */
 
     header {
         z-index: 100;
@@ -47,7 +46,7 @@
 
     .name h3 {
         display: inline-flex;
-        color: #8F9FAC;
+        color: #69747E;
     }
 
     .menu {
@@ -68,29 +67,30 @@
     .menu ul li a {
         display: block;
         text-decoration: none;
-        color: black;
-        transition: color 0.2s linear;
+        color: #DB504A;
     }
 
     .menu ul li a:hover {
-        font-weight: bold;
+        font-size: 1.2rem;
+        color: #FF6F59;
+        transition: font-size 1s linear, color 1s ease-out;
     }
 
     .mobile-nav {
         display: none;
     }
-    /* Content */
+    /* Content Section */
 
     .content {
         z-index: 1;
         padding-top: 7rem;
     }
-    /* Content - Banner */
+    /* Hero Section */
 
     .banner {
         display: flex;
         justify-content: center;
-        background-color: #8F9FAC;
+        background-color: #69747E;
         max-width: 100%;
         padding-bottom: 1.5rem;
         align-items: center;
@@ -155,8 +155,9 @@
         background-color: #FF6F59;
         color: white;
         filter: opacity(70%);
+        transition: background-color 1s ease-out;
     }
-    /* Content - Info */
+    /* Info Section */
 
     .info {
         display: flex;
@@ -196,9 +197,9 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        background-color: #8F9FAC;
+        background-color: #69747E;
         margin: 0 0 2rem 2rem;
-        transition: all 0.4s linear;
+        transition: all 1s ease-in-out 0.2s;
         height: 10rem;
     }
 
@@ -226,8 +227,13 @@
 
     .article-box a {
         text-decoration: none;
-        color: white;
+        color: #43AA8B;
         padding-top: 1rem;
+    }
+
+    .article-box a:hover {
+        color: #FF6F59;
+        transition: color 1s ease-out;
     }
 
     .right-container {
@@ -237,11 +243,11 @@
         justify-content: center;
         max-width: 40%;
     }
-    /* Content - Start Learning */
+    /* Courses Section */
 
     .classes {
         display: flex;
-        background-color: #8F9FAC;
+        background-color: #69747E;
         flex-flow: wrap;
         justify-content: center;
     }
@@ -290,7 +296,7 @@
         background-color: none;
         height: 100%;
         border-radius: 0.5rem;
-        color: black;
+        color: #DB504A;
         transition: all 0.2s linear;
         text-decoration: none;
     }
@@ -299,6 +305,7 @@
         background-color: #FF6F59;
         color: white;
         filter: opacity(70%);
+        transition: filter 1s linear, background-color 1s ease-in-out;
     }
 
     .course-box img {
@@ -325,7 +332,7 @@
     .text p {
         text-decoration: none;
     }
-    /* Content - Thesis Exhibit */
+    /* Thesis Section */
 
     .info,
     .thesis {
@@ -380,15 +387,16 @@
     footer {
         display: flex;
         justify-content: space-between;
-        background-color: #8F9FAC;
+        background-color: #69747E;
         padding: 1.5rem;
         min-height: 4rem;
         right: 0;
-        color: white;
+        color: ;
     }
 
     footer .company {
         align-self: center;
+        color: #43AA8B
     }
 
     footer .menu {
@@ -396,9 +404,9 @@
     }
 
     footer .menu ul li a {
-        color: white;
+        color: #43AA8B;
     }
-    /* MEDIA - */
+    /* Media Screen 640px */
 
     @media only screen and (max-width: 640px) {
         .container {
@@ -416,6 +424,7 @@
             max-width: 90%;
         }
     }
+    /* Media Screen Between 640px and 1024px */
 
     @media only screen and (max-width: 1024px) and (min-width: 640px) {
         .container {
@@ -431,6 +440,7 @@
             max-width: 45%;
         }
     }
+    /* Media Screen 840px */
 
     @media only screen and (max-width: 840px) {
         header {
@@ -459,6 +469,7 @@
             padding-top: 0rem;
         }
     }
+    /* Media Screen 1024px */
 
     @media only screen and (max-width: 1024px) {
         .left-container {
@@ -487,7 +498,7 @@
             margin: 2rem auto;
             padding-bottom: 1rem;
             min-width: 100%;
-            justify-content: center;
+            align-items: center;
         }
         .banner-text {
             margin: 0 0 0 0;
@@ -507,7 +518,7 @@
             background-color: none;
             height: 100%;
             border-radius: 0.5rem;
-            color: black;
+            color: #DB504A;
             margin: 0 0 0 0;
             padding: 0 0 0 0;
             transition: all 0.2s linear;
@@ -515,7 +526,7 @@
             width: 100%;
         }
         .article-box .text-box a {
-            color: black;
+            color: #DB504A;
             line-height: 3rem;
             font-weight: bold;
         }
@@ -550,7 +561,7 @@
         }
         footer {
             background-color: white;
-            color: black;
+            color: #DB504A;
             justify-content: center;
         }
     }
